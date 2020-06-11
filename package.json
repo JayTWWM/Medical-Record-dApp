@@ -1,0 +1,35 @@
+{
+    "name": "medical_record_tracker",
+    "version": "1.0.0",
+    "description": "Blockchain Medical Report Tracker",
+    "main": "truffle-config.js",
+    "directories": {
+        "test": "test"
+    },
+    "scripts": {
+        "dev": "lite-server",
+        "test": "echo \"Error: no test specified\" && sexit 1"
+    },
+    "author": "Jay Mehta",
+    "license": "ISC",
+    "devDependencies": {
+        "bootstrap": "^4.4.1",
+        "chai": "^4.1.2",
+        "chai-as-promised": "^7.1.1",
+        "chai-bignumber": "^2.0.2",
+        "lite-server": "^2.3.0",
+        "nodemon": "^1.17.3",
+        "truffle": "5.0.2",
+        "truffle-contract": "3.0.6"
+    },
+    "dependencies": {
+        "body-parser": "^1.19.0",
+        "clientside-require": "^4.7.2",
+        "ejs": "^3.0.1",
+        "express": "^4.17.1",
+        "express-fileupload": "^1.1.6",
+        "ipfs-api": "^26.1.2",
+        "ipfs-http-client": "^42.0.0",
+        "jquery": "^3.4.1"
+    }
+}

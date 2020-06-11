@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Sign Up Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="src/css/login.css">
+    <link rel="stylesheet" type="text/css" href="src/css/main.css">
+
+    <script src="https://wzrd.in/standalone/buffer"></script>
+    <script src="https://unpkg.com/ipfs-api@9.0.0/dist/index.js" integrity="sha384-5bXRcW9kyxxnSMbOoHzraqa7Z0PQWIao+cgeg327zit1hz5LZCEbIMx/LWKPReuB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/ethereum/web3.js@1.0.0-beta.34/dist/web3.js" charset="utf-8"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Faker/3.1.0/faker.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="./index.js" type="text/javascript"></script>
+    <script src="./src/js/app.js" type="text/javascript"></script>
+
+    <script src="src/js/vendor/modernizr-2.8.3.min.js"></script>
+    <script src="src/js/vendor/jquery-1.12.0.min.js"></script>
+</head>
+
+<body style="background-image: url(src/images/index.jpg);background-repeat: no-repeat;background-size: cover;">
+    <div class="site" id="page">
+        <section class="hero-section hero-section--image clearfix clip">
+            <div class="hero-section__wrap">
+                <div class="container" id="this">
+                    <center>
+                        <div class="wrap-login100">
+                            <form class="login100-form validate-form" action=""><i class="fa fa-user fa-5x" aria-hidden="true"></i><span class="login100-form-title p-b-34 p-t-27">Sign Up</span><br>
+                                <div class="wrap-input100 validate-input" data-validate="Enter username"><input class="input100" type="text" id="username" placeholder="Username"><span class="focus-input100" data-placeholder="&#xf207;"></span></div>
+                                <div class="wrap-input100 validate-input" data-validate="Enter password"><input class="input100" type="password" id="pass" placeholder="Password"><span class="focus-input100" data-placeholder="&#xf191;"></span></div>
+                                <div class="contact100-form-checkbox" style="font-size: large;font-weight: 500;"><input style="width: 17.5px;height: 17.5px" type="checkbox" id="myCheck"> Doctor!</div>
+                                <div class="container-login100-form-btn"><button class="login100-form-btn" type="button" onclick="signUp()" style="color: black;">Sign Up</button></div>
+                            </form>
+                            <div class="text-center p-t-90"><a class="txt1" href="./login.html">Already Registered?</a></div>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>
