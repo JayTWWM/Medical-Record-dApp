@@ -27,7 +27,7 @@
         "clientside-require": "^4.7.2",
         "ejs": "^3.0.1",
         "express": "^4.17.1",
-        "express-fileupload": "^1.1.6",
+        "express-fileupload": "^1.1.9",
         "ipfs-api": "^26.1.2",
         "ipfs-http-client": "^42.0.0",
         "jquery": "^3.4.1"
