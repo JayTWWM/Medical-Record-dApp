@@ -52,12 +52,12 @@ function record() {
 
 function upload() {
     const photo = document.getElementById("file");
-    const reader = new FileReader();
-    reader.readAsArrayBuffer(photo.files[0]);
-    reader.onloadend = function() {
+    // const reader = new FileReader();
+    // reader.readAsText(photo.files[0]);
+    // reader.onloadend = function() {
         const ipfs = window.IpfsApi('localhost', 5001) // Connect to IPFS
-        const buf = buffer.Buffer(reader.result) // Convert data into buffer
-        ipfs.files.add(buf, (err, result) => { // Upload buffer to IPFS
+        // var arrayBuffer = reader.result;
+        ipfs.files.add(Array.from(photo.files[0]), (err, result) => { // Upload buffer to IPFS
             if (err) {
                 console.error(err)
                 return
@@ -67,7 +67,7 @@ function upload() {
             ipfsHash = result[0].hash;
             console.log(ipfsHash);
         })
-    }
+    // }
 }
 
 function logOut() {
@@ -88,6 +88,7 @@ function share() {
     RecordTrackerContract.methods.shareRecord(account0, id, un)
         .send()
         .then(result => {
+
             if (result.status === true) {
                 alert("Success");
                 console.log(result);
