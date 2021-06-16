@@ -17,20 +17,23 @@
         "chai": "^4.1.2",
         "chai-as-promised": "^7.1.1",
         "chai-bignumber": "^2.0.2",
-        "lite-server": "^2.3.0",
+        "lite-server": "^2.6.1",
         "nodemon": "^1.17.3",
-        "truffle": "5.0.2",
+        "truffle": "^5.3.10",
         "truffle-contract": "3.0.6"
     },
     "dependencies": {
+        "Buffer": "0.0.0",
         "body-parser": "^1.19.0",
+        "browserify": "^17.0.0",
         "buffer": "^6.0.3",
         "clientside-require": "^4.7.2",
         "ejs": "^3.0.1",
         "express": "^4.17.1",
         "express-fileupload": "^1.1.6",
+        "ieee754": "^1.2.1",
         "ipfs-api": "^26.1.2",
         "ipfs-http-client": "^42.0.0",
-        "jquery": "^3.4.1"
+        "jquery": "^3.6.0"
     }
 }

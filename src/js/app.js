@@ -50,14 +50,25 @@ function record() {
         });
 }
 
-function upload() {
+function getBase64(file) {
+    var reader = new FileReader();
+    reader.readAsDataURL(file);
+    reader.onload = function () {
+      console.log(reader.result);
+    };
+    reader.onerror = function (error) {
+      console.log('Error: ', error);
+    };
+ }
+
+ function upload() {
     const photo = document.getElementById("file");
-    // const reader = new FileReader();
-    // reader.readAsText(photo.files[0]);
-    // reader.onloadend = function() {
+    const reader = new FileReader();
+    reader.readAsArrayBuffer(photo.files[0]);
+    reader.onloadend = function() {
         const ipfs = window.IpfsApi('localhost', 5001) // Connect to IPFS
-        // var arrayBuffer = reader.result;
-        ipfs.files.add(Array.from(photo.files[0]), (err, result) => { // Upload buffer to IPFS
+        var buf = buffer.Buffer.from(reader.result);
+        ipfs.files.add(buf, (err, result) => { // Upload buffer to IPFS
             if (err) {
                 console.error(err)
                 return
@@ -67,8 +78,8 @@ function upload() {
             ipfsHash = result[0].hash;
             console.log(ipfsHash);
         })
-    // }
-}
+    }
+  }
 
 function logOut() {
     RecordTrackerContract.methods.logOut(account0)

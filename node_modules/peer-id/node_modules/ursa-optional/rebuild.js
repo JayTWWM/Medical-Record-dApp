@@ -7,11 +7,15 @@ if (verbose) {
   if (p.status || p.signal || p.error) {
     console.log('ursaNative bindings compilation fail. This is not an issue. Modules that depend on it will use fallbacks.');
     var fs = require('fs');
-    if (p.error) {
-      fs.writeFileSync('./stderr.log', p.error.stack);
-    } else {
-      fs.writeFileSync('./stdout.log', p.stdout);
-      fs.writeFileSync('./stderr.log', p.stderr);
+    try {
+      if (p.error) {
+        fs.writeFileSync('./stderr.log', p.error.stack);
+      } else {
+        fs.writeFileSync('./stdout.log', p.stdout);
+        fs.writeFileSync('./stderr.log', p.stderr);
+      }
+    } catch (e) {
+      console.log('Cannot log errors', e)
     }
   }
 }
