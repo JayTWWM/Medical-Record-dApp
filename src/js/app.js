@@ -64,7 +64,7 @@ function getBase64(file) {
  function upload() {
     const photo = document.getElementById("file");
     const reader = new FileReader();
-    reader.readAsArrayBuffer(photo.files[0]);
+    reader.readAsBinaryString(photo.files[0]);
     reader.onloadend = function() {
         const ipfs = window.IpfsApi('localhost', 5001) // Connect to IPFS
         var buf = buffer.Buffer.from(reader.result);
