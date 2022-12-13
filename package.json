@@ -29,7 +29,7 @@
         "buffer": "^6.0.3",
         "clientside-require": "^4.7.2",
         "ejs": "^3.0.1",
-        "express": "^4.17.1",
+        "express": "^4.17.3",
         "express-fileupload": "^1.1.6",
         "ieee754": "^1.2.1",
         "ipfs-api": "^26.1.2",
